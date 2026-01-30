@@ -1,0 +1,35 @@
+// Font Size
+$fs: (
+    xxs: 1.2rem,
+    xs: 1.5rem,
+    s: 2rem,
+    m: 3.75rem,
+    l: 6rem,
+    xl: 8rem,
+    xxl: 12.5rem
+);
+
+// Border Radius
+$br: (
+    s: 5px,
+    m: 10px,
+    l: 50px,
+);
+
+// Spacing
+$space: (
+    s: 5px,
+    m: 10px,
+    l: 12px,
+    xl: 20px,
+    xxl: 50px
+);
+
+// Spacing using rem units
+$space-rem: (
+    s: 0.3rem,
+    m: 0.6rem,
+    l: 0.75rem,
+    xl: 1.25rem,
+    xxl: 3rem
+)

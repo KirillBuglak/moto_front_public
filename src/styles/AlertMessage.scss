@@ -1,0 +1,20 @@
+@import 'themeCommons.scss';
+
+.alert-message {
+    position: fixed;
+    bottom: 0;
+    margin-left: map-get($space-rem, m);
+    border-radius: map-get($br, m) map-get($br, m) 0 0;
+    padding: map-get($space-rem, m) map-get($space-rem, xl);
+    font-size: map-get($fs, xs);
+    background-color: var(--notification-color);
+    box-shadow:
+        0 -1px 10px var(--primary-color-hover),
+        1px 0 10px var(--primary-color-hover);
+    transition: all 0.3s ease;
+
+    &.fade-out {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}

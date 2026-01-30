@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > snapshot 1`] = `
+<div
+  class="layout"
+>
+  <div>
+    <div
+      data-testid="upperbar-open"
+    >
+      true
+    </div>
+    <button
+      data-testid="toggle-btn"
+    >
+      Toggle
+    </button>
+  </div>
+  <div
+    class="content-wrapper menu-open"
+  >
+    <div
+      data-testid="left-menu"
+    />
+    <div
+      data-testid="router"
+    />
+  </div>
+</div>
+`;

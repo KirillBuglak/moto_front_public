@@ -1,0 +1,153 @@
+@import 'themeCommons.scss';
+
+.settings-layout {
+    width: 100%;
+    height: 100%;
+    color: var(--primary-color);
+
+    .header {
+        background-color: var(--secondary-color);
+        border-radius: map-get($br, s);
+        font-size: map-get($fs, l);
+        height: fit-content;
+        margin: 0 map-get($space-rem, s);
+        padding: 0 map-get($space-rem, s);
+    }
+
+    .settings {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--secondary-color);
+            border-radius: map-get($br, s);
+            margin: map-get($space-rem, s);
+        }
+
+        &-theme {
+            flex-grow: 0.5;
+
+            .theme-options {
+                flex-direction: row;
+                width: fit-content;
+
+                .theme-option {
+                    flex-direction: row;
+                    width: fit-content;
+                    align-items: flex-start;
+
+                    label {
+                        margin-left: map-get($space-rem, s);
+                        cursor: pointer;
+                    }
+
+                    input[type="radio"] {
+                        scale: 1.6;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .colors {
+                width: 55%;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &-left,
+                &-right {
+
+                    div {
+                        align-items: center;
+                        flex-direction: row;
+
+                        label {
+                            margin-left: map-get($space-rem, m);
+                            cursor: pointer;
+                        }
+
+                        input {
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .confirm-buttons {
+                flex-direction: row;
+                justify-content: flex-end;
+                padding-bottom: map-get($space-rem, m);
+                gap: map-get($space-rem, m);
+
+                .reset {
+                    color: var(--primary-color);
+                    font-size: map-get($fs, xxs);
+                    cursor: pointer;
+                    border-radius: map-get($br, s);
+                    border-color: var(--button-color);
+                    background-color: var(--button-color);
+                }
+            }
+        }
+
+        &-other {
+            flex-grow: 1;
+        }
+
+        &-theme,
+        &-other {
+            padding-left: map-get($space-rem, xl);
+            padding-right: map-get($space-rem, xl);
+        }
+
+        .toggle-switch {
+            margin: map-get($space, m) map-get($space, s);
+            position: relative;
+            display: inline-block;
+            width: 54px;
+            height: 28px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--layout-color);
+            transition: .4s;
+            border-radius: map-get($br, l);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: map-get($space, xl);
+            width: map-get($space, xl);
+            left: map-get($space, s);
+            bottom: 4px;
+            background-color: var(--secondary-color);
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: var(--notification-color);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+    }
+}

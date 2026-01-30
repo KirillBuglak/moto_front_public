@@ -1,0 +1,15 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--layout-color);
+
+    .content-wrapper {
+        display: flex;
+        flex-grow: 1;
+
+        &.menu-closed .main-layout {
+            transition: margin-left 0.3s ease-in-out;
+        }
+    }
+}

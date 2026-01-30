@@ -1,0 +1,68 @@
+.test_list {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(250, 84, 1);
+    font-size: large;
+}
+
+.test_list>button {
+    background-color: aqua;
+
+    &:hover {
+        background-color: rgb(4, 0, 255);
+    }
+}
+
+.test_list>button>svg>g {
+    fill: #ffffff;
+    stroke: #ffffff;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-header {
+    background-color: #333;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    h1 {
+        margin: 0;
+    }
+
+    button {
+        color: rgb(255, 0, 0);
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+}
+
+.app-drawer {
+    width: 250px;
+    background-color: #f0f0f0;
+    transform: translateX(-100%);
+    /* Hide initially */
+    transition: transform 0.3s ease-in-out;
+
+    /* Remove height: 100%; */
+    /* The height will now be determined by the wrapper */
+    &.open {
+        transform: translateX(0);
+        /* Show drawer */
+    }
+}
+
+.app-content {
+    flex-grow: 1;
+}

@@ -1,0 +1,58 @@
+@import 'themeCommons.scss';
+
+.upperBar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,
+            var(--headerFirst-color) 10%,
+            var(--primary-color) 60%,
+            var(--headerSecond-color) 90%);
+    border-radius: map-get($br, l) map-get($br, l) map-get($br, l) 0;
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        color: var(--primary-color);
+
+        svg {
+            scale: 1.5;
+        }
+
+        &:hover {
+            color: var(--primary-color-hover);
+        }
+    }
+
+    h1 {
+        margin-left: map-get($space-rem, m);
+        color: var(--primary-color);
+    }
+
+    .right-buttons-wrapper {
+        display: flex;
+        margin-left: auto;
+        padding-right: map-get($space-rem, xl);
+        position: relative;
+
+        .login-button {
+            .account-icon {
+                scale: 1.8;
+            }
+        }
+
+        .lang-wrapper {
+            display: flex;
+
+            .lang {
+                margin-right: map-get($space-rem, xl);
+                font-size: map-get($fs, xs);
+            }
+
+            svg {
+                width: 30px;
+            }
+        }
+    }
+}

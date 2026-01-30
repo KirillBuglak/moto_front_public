@@ -1,0 +1,211 @@
+@import 'themeCommons.scss';
+
+.abstract-container {
+    align-items: start;
+    width: 100%;
+    color: var(--primary-color);
+
+    .header {
+        margin: 0 map-get($space-rem, s);
+        border-radius: map-get($br, s);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--secondary-color);
+
+        &-title {
+            border-radius: map-get($br, s);
+            font-size: map-get($fs, l);
+            height: fit-content;
+            margin: 0 map-get($space-rem, s);
+        }
+
+        &-buttons {
+            display: flex;
+            margin-right: map-get($space-rem, s);
+            gap: map-get($space-rem, s);
+
+            button {
+                color: var(--primary-color);
+                cursor: pointer;
+                font-size: map-get($fs, xs);
+                padding: map-get($space-rem, s);
+                border-radius: map-get($br, s);
+                background-color: var(--button-color);
+                border-color: var(--button-color);
+            }
+        }
+    }
+
+    .create-update-window-wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--layout-transparent-color);
+        border-radius: map-get($br, m);
+        color: var(--primary-color);
+        align-items: start;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin-top: map-get($space-rem, s);
+
+        .create-update-window {
+            margin-left: map-get($space-rem, s);
+            padding: map-get($space-rem, m);
+            background-color: var(--secondary-color);
+            border-radius: map-get($br, s);
+
+            .input-rows {
+                display: flex;
+                margin-left: map-get($space-rem, s);
+                max-height: 76vh;
+                min-width: 8 * map-get($space-rem, xxl);
+                max-width: 16 * map-get($space-rem, xxl);
+                width: fit-content;
+                flex-wrap: wrap;
+
+                .input-row {
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 7 * map-get($space-rem, xxl);
+                    padding-right: map-get($space-rem, xxl);
+
+                    input {
+                        color: var(--primary-color);
+                        font-size: map-get($fs, xs);
+                        background-color: transparent;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid var(--primary-color);
+                        padding-left: map-get($space-rem, m);
+                        margin-bottom: map-get($space-rem, xl);
+
+                        &::placeholder {
+                            color: var(--primary-color-hover);
+                        }
+
+                        &:focus {
+                            border-bottom-color: var(--button-color);
+                        }
+                    }
+                }
+            }
+
+            .confirm-buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                .save,
+                .cancel {
+                    color: var(--primary-color);
+                    padding: map-get($space-rem, s);
+                    font-size: map-get($fs, xxs);
+                    cursor: pointer;
+                    border-radius: map-get($br, s);
+                }
+
+                .save {
+                    background-color: var(--button-color);
+                    border-color: var(--button-color);
+                }
+
+                .cancel {
+                    margin-left: map-get($space-rem, m);
+                    background-color: var(--cancel-color);
+                    border-color: var(--cancel-color);
+                }
+            }
+        }
+    }
+
+    .abstract-table {
+        min-width: 400px;
+        margin: map-get($space-rem, s) map-get($space-rem, s);
+        border-radius: map-get($br, s);
+        overflow: hidden;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th,
+            td {
+                padding: map-get($space-rem, l);
+                text-align: left;
+                border-bottom: 1px solid var(--primary-color-hover);
+            }
+        }
+
+        &-header {
+            background-color: var(--headerFirst-color);
+
+            th {
+                font-weight: bold;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--primary-color-hover);
+                }
+            }
+        }
+
+        &-row {
+            background-color: var(--secondary-color);
+
+            &:hover {
+                background-color: var(--topMenu-color-hover);
+            }
+        }
+
+        &-row.highlighted {
+            background-color: var(--subMenu-color-hover);
+
+            &:hover {
+                background-color: var(--rowHighlighted-color-hover);
+            }
+        }
+    }
+
+    .pagination {
+        padding: 0 map-get($space-rem, xxl);
+        margin: 0 map-get($space-rem, s);
+        display: flex;
+        flex-direction: row;
+        gap: map-get($space-rem, m);
+        align-items: center;
+        justify-content: end;
+        font-size: map-get($fs, xxs);
+        background-color: var(--secondary-color);
+
+        svg {
+            color: var(--primary-color);
+
+            &:hover {
+                color: var(--primary-color-hover);
+                cursor: pointer;
+            }
+        }
+
+        input {
+            width: 40px;
+            color: var(--primary-color);
+            background-color: transparent;
+            border-color: var(--primary-color);
+            border-radius: map-get($br, m);
+            font-size: map-get($fs, xxs);
+            padding-left: map-get($space-rem, s);
+            cursor: pointer;
+        }
+    }
+}
+
+.default {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: map-get($fs, l);
+    margin-top: map-get($space-rem, xxl);
+    padding: 0 map-get($space-rem, xl);
+    border-radius: map-get($br, m);
+}

@@ -1,0 +1,19 @@
+@import 'themeCommons.scss';
+
+.main-layout {
+    background-color: var(--layout-color);
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .default {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        font-size: map-get($fs, l);
+        margin-top: map-get($space-rem, xxl);
+        padding: 0 map-get($space-rem, xl);
+        border-radius: map-get($br, m);
+    }
+}

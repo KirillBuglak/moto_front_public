@@ -1,0 +1,60 @@
+@import 'themeCommons.scss';
+
+.login-form-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .login-form-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: map-get($space-rem, m);
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        position: absolute;
+        border-radius: map-get($br, s);
+        box-shadow: 0 4px 20px var(--primary-color-hover);
+        white-space: nowrap;
+
+        div {
+            padding: map-get($space-rem, s);
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: map-get($space-rem, s);
+            }
+
+            input {
+                font-size: map-get($fs, xxs);
+                border: none;
+                color: var(--primary-color);
+                border-bottom: 1px solid var(--primary-color);
+                background-color: transparent;
+                outline: none;
+
+                &::placeholder {
+                    color: var(--primary-color-hover);
+                }
+
+                &:focus {
+                    border-bottom-color: var(--button-color);
+                }
+            }
+        }
+
+        button {
+            font-size: map-get($fs, xxs);
+            color: var(--primary-color);
+            margin-top: map-get($space-rem, s);
+            padding: map-get($space-rem, s) map-get($space-rem, m);
+            align-self: flex-end;
+            background-color: var(--button-color);
+            border-color: var(--button-color);
+            border-radius: map-get($br, s);
+            cursor: pointer;
+        }
+    }
+}

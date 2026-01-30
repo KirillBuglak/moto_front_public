@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LeftMenu > snapshot 1`] = `
+<aside
+  class="left-menu open"
+>
+  <div
+    class="top-menu"
+  >
+    <div>
+      <div>
+        <div
+          class="top-menu-item"
+        >
+          <span>
+            ICON_PARENT
+          </span>
+          <p>
+            parentTitle
+          </p>
+          <span>
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+              data-testid="ExpandMoreIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div>
+        <div
+          class="top-menu-item"
+        >
+          <span>
+            ICON_SINGLE
+          </span>
+          <p>
+            singleTitle
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+`;

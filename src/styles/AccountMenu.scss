@@ -1,0 +1,50 @@
+@import 'themeCommons.scss';
+
+.account-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: map-get($space-rem, m);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    position: absolute;
+    border-radius: map-get($br, s);
+    margin-top: map-get($space-rem, s);
+    box-shadow: -4px 4px 8px var(--primary-color-hover);
+    top: 100%;
+    right: 0;
+    z-index: 2;
+    white-space: nowrap;
+
+    &-header,
+    &-options {
+        width: 100%;
+        div {
+            padding: map-get($space-rem, s);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--topMenu-color-hover);
+            }
+        }
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: map-get($space-rem, m);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--topMenu-color-hover);
+        }
+    }
+
+    .divider {
+        width: 90%;
+        height: 1px;
+        background-color: var(--primary-color);
+        margin: map-get($space-rem, s) 0;
+    }
+}

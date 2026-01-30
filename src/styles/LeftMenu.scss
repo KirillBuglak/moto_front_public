@@ -1,0 +1,61 @@
+@import 'themeCommons.scss';
+
+$menu-width: 200px;
+
+.left-menu {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    width: $menu-width;
+    background-color: var(--secondary-color);
+    box-shadow: 1px 0px 10px var(--primary-color-hover);
+    transition: margin-left 0.3s ease-in-out;
+    z-index: 10;
+    overflow-x: hidden;
+    white-space: nowrap;
+
+    &.open {
+        margin-left: -$menu-width;
+    }
+
+    &.closed {
+        margin-left: 0;
+    }
+
+    .top-menu {
+
+        &-item,
+        .sub-menu-1 {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding-left: map-get($space-rem, m);
+        }
+
+        &-item {
+            &:hover {
+                background-color: var(--topMenu-color-hover);
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                margin-right: map-get($space-rem, m);
+            }
+        }
+
+        p {
+            margin-left: map-get($space-rem, m);
+        }
+
+        .sub-menu-1 {
+            padding-left: map-get($space-rem, xl);
+            background-color: var(--topMenu-color-hover);
+
+            &:hover {
+                background-color: var(--subMenu-color-hover);
+            }
+        }
+    }
+}

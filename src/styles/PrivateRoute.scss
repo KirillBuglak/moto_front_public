@@ -1,0 +1,9 @@
+@import 'themeCommons.scss';
+
+.denied {
+    color: var(--primary-color);
+    background-color: var(--cancel-color);
+    font-size: map-get($fs, xl);
+    padding: 0 map-get($space-rem, xl);
+    border-radius: map-get($br, m);
+}

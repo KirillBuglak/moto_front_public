@@ -1,0 +1,1 @@
+sudo docker build . -t moto-front:v1.0
