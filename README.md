@@ -2,7 +2,7 @@
 
 ----
 <p align="center">
-<img src="imagesForReadme/main_front.gif"></p>
+<img src="imagesForReadme/front.gif"></p>
 
 ----
 ## Stack
